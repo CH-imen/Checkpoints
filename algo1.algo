@@ -1,0 +1,26 @@
+ALGORITHM read a sentence
+VAR
+    phrase : STRING[] ;
+    i, mot ,voyelle: INTEGER := 0;
+   
+BEGIN
+    Write("entrer une phrase qui se termine par un point");
+    Read(phrase);
+    while (phrase[i]<>".") DO
+      if (i==" ")then
+        mot:=Mot+1;
+    
+      END_IF 
+        
+        if (voyelle[i] == 'a' || voyelle[i]  == 'e' || voyelle[i]  == 'i' || voyelle[i]  == 'o' || voyelle[i]  == 'u' || voyelle[i]  == 'y' ||
+                voyelle[i]  == 'A' || voyelle[i]  == 'E' || voyelle[i]  == 'I' || voyelle[i]  == 'O' || voyelle[i]  == 'U' || voyelle[i]  == 'Y') then 
+
+            voyelle:= voyelle+1;
+                
+        END_if
+    i++;
+    END_WHILE
+
+    write ("le nombre de mot est:" +mot);
+    write ("le nombre de voyelle est:" +voyelle);
+END

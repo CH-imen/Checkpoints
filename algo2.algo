@@ -1,0 +1,52 @@
+ALGORITHM two sets of elements
+VAR
+   tab: ARRAY_OF INTEGER[100];
+   tab1, tab2, tab3 :tab;
+   n,m,i,j,sum: INTEGER;
+   sum:=0;
+
+BEGIN
+   write("entrer la taille du tableau 1");
+   read(n);
+   write("entrer la taille du tableau 2");
+   read(m);
+   FOR i FROM 0 TO n-1 DO
+   Read(tab1[i]);// insert from user
+   END_FOR
+   FOR j FROM 0 TO m-1 DO
+   Read(tab2[j]);// insert from user
+   END_FOR
+
+   //fusionner les deux tableaux 
+      k:=0;
+   FOR i FROM 0 TO n-1 DO
+   tab3[k]:= tab1[i];
+   k:=k+1;
+   END_FOR
+   k:=n-1;
+   FOR i FROM 0 TO m-1 DO
+   t3[k+1]:=t2[i];
+   END_FOR
+
+o:=0;
+j:=0;
+FOR i FROM 0 TO n-1 DO
+
+   REPEAT
+      IF (x== tab3[j]) THEN
+         o:=o+1;
+      END_IF
+      j++;
+   UNTIL (j>n)
+   IF (o==1) THEN
+      sum:=sum+t[i]
+   END_IF
+END_FOR
+
+
+
+   
+
+   
+
+END  
