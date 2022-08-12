@@ -1,0 +1,36 @@
+FUNCTION Dot_product(VAR v1,v2 : ARRAY_OF INTEGER): INTEGER
+VAR
+  // Create an auxiliary stack
+  PS:=0;
+  BEGIN
+    write("entrer la dimension du vecteur 1");
+    read(n);
+    write("entrer la dimension du vecteur 2");
+    read(m);
+    FOR i FROM 0 TO n-1 DO
+    Read(v1[i]);// insert from user
+    END_FOR
+    FOR j FROM 0 TO m-1 DO
+    Read(v2[j]);// insert from user
+    END_FOR
+
+    for i from 0 to n-1 DO
+      for j from 0 to m-1 DO
+      PS:= PS +v1[i] * v2[j];
+    END_FOR
+    END_FOR
+RETURN PS ;
+END
+ALGORITHM Produit scalaire
+VAR
+P_S:INTEGER;
+BEGIN
+P_S:= Dot_product(v1,v2);
+IF (P_S == NULL) THEN
+ write("les deux vecteurs sont ortogonaux");
+ELSE
+ write("les deux vecteurs ne sont pas ortogonaux");
+END_IF
+END
+
+

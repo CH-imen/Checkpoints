@@ -1,0 +1,35 @@
+PROCEDURE insert-element (VAR arr : ARRAY_OF INTEGER)
+VAR
+    i, j, elt, n:INTEGER;
+ n := arr.length;
+BEGIN
+
+    for  i from 1 to n do // Start from 1 as arr[0] is always sorted
+        Int currentElement := arr[i];
+        Int j := i-1;
+        // Move elements of arr[0..i-1], that are greater than key,
+        // to one position ahead of their current position
+        while (j >= 0 && arr[j] > currentElement) do
+        arr[j + 1] = arr[j];
+        j = j - 1;
+        END_WHILE
+        // Finally place the Current element at its correct position.
+        arr[j + 1] := currentElement;
+    END_FOR
+    //insertion de l'element dans un tableau trier
+
+    write("donner l'element a inserer");
+    read(elt);
+    
+    for i from 0 to n-1 do
+        if (arr[i]< elt) || (arr[i]==elt) then
+            elt:=arr[i];
+            arr[i]:=i;
+            n:=n+1;
+        end_if
+    END_FOR
+
+END
+
+
+
